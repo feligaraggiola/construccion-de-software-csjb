@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iniciar sesión · CSBJ — Club de Socios Boca Juniors</title>
+<meta name="description" content="Iniciá sesión en tu cuenta de socio de Boca Juniors para acceder a tus beneficios, entradas y noticias.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<div class="auth-shell" id="main">
+  <div class="auth-visual">
+    <a href="index.html" class="brand">
+      <svg class="crest" viewBox="0 0 48 48"><path d="M24 2 L44 9 V23 C44 34 36 42 24 46 C12 42 4 34 4 23 V9 Z" fill="#0a1830" stroke="#ffc72c" stroke-width="1.5"/><path d="M24 4.4 L41.5 10.4 V23 C41.5 32.8 34.5 39.8 24 43.4 C13.5 39.8 6.5 32.8 6.5 23 V10.4 Z" fill="#ffc72c"/><path d="M6.5 17 H41.5 V27 H6.5 Z" fill="#0a1830"/></svg>
+      <span class="brand-text">Club de Socios<strong>Boca Juniors</strong></span>
+    </a>
+
+    <div>
+      <h1 class="auth-headline">Bienvenido<span>a tu casa</span></h1>
+      <p>Iniciá sesión y disfrutá de todos los beneficios por ser socio de Boca.</p>
+
+      <div class="auth-perks">
+        <div class="perk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11Z"/></svg> Beneficios exclusivos</div>
+        <div class="perk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4V8Z"/></svg> Entradas preferenciales</div>
+        <div class="perk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7Z"/></svg> Experiencias únicas</div>
+        <div class="perk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg> Descuentos y promociones</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="auth-form-wrap">
+    <div class="auth-box">
+      <a href="index.html" class="auth-back">&larr; Volver al sitio</a>
+      <h2 style="font-family:var(--font-head); text-transform:uppercase; font-size:22px; margin-bottom:26px;">Iniciar sesión</h2>
+
+      <form data-validate novalidate>
+        <div class="field">
+          <label for="login-user">Correo electrónico o DNI</label>
+          <input type="text" id="login-user" name="login-user" placeholder="ejemplo@correo.com" required>
+          <span class="field-error">Ingresá tu correo o DNI para continuar.</span>
+        </div>
+
+        <div class="field">
+          <label for="login-pass">Contraseña</label>
+          <div class="input-wrap">
+            <input type="password" id="login-pass" name="login-pass" placeholder="••••••••" required>
+            <button type="button" class="toggle-pass" aria-label="Mostrar contraseña">Ver</button>
+          </div>
+          <span class="field-error">Ingresá tu contraseña.</span>
+        </div>
+
+        <div class="form-aux">
+          <label style="display:flex; align-items:center; gap:8px; color:var(--text-mid);"><input type="checkbox" style="accent-color:var(--gold-500);"> Recordarme</label>
+          <a href="#">¿Olvidaste tu contraseña?</a>
+        </div>
+
+        <div data-success style="display:none; background:rgba(52,199,123,0.1); border:1px solid rgba(52,199,123,0.3); color:#34c77b; padding:12px 14px; border-radius:8px; font-size:13px; margin-bottom:16px;">
+          Sesión iniciada correctamente (demo sin backend).
+        </div>
+
+        <button type="submit" class="btn btn-gold btn-block">Ingresar</button>
+      </form>
+
+      <p class="auth-switch">¿No tenés cuenta? <a href="registro.html">Registrate</a></p>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
