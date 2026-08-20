@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react';
 // Compila src/entry-cuenta.jsx a un único archivo JS (formato IIFE)
 // que se incluye directamente con <script> en mi-cuenta.html.
 export default defineConfig({
+  define: { 'process.env.NODE_ENV': JSON.stringify('production') },
   plugins: [react()],
   build: {
     outDir: '../csbj/js/react',
