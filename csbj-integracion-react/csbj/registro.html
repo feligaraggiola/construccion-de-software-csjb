@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registrarme · CSBJ — Club de Socios Boca Juniors</title>
+<meta name="description" content="Creá tu cuenta de socio de Boca Juniors y accedé a beneficios exclusivos, entradas preferenciales y más.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<div class="auth-shell" id="main">
+  <div class="auth-visual">
+    <a href="index.html" class="brand">
+      <svg class="crest" viewBox="0 0 48 48"><path d="M24 2 L44 9 V23 C44 34 36 42 24 46 C12 42 4 34 4 23 V9 Z" fill="#0a1830" stroke="#ffc72c" stroke-width="1.5"/><path d="M24 4.4 L41.5 10.4 V23 C41.5 32.8 34.5 39.8 24 43.4 C13.5 39.8 6.5 32.8 6.5 23 V10.4 Z" fill="#ffc72c"/><path d="M6.5 17 H41.5 V27 H6.5 Z" fill="#0a1830"/></svg>
+      <span class="brand-text">Club de Socios<strong>Boca Juniors</strong></span>
+    </a>
+
+    <div>
+      <h1 class="auth-headline">Sumate<span>a la pasión</span></h1>
+      <p>Completá tus datos y formá parte del Club de Socios de Boca Juniors.</p>
+
+      <div class="auth-perks">
+        <div class="perk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11Z"/></svg> Beneficios exclusivos</div>
+        <div class="perk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4V8Z"/></svg> Entradas preferenciales</div>
+        <div class="perk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7Z"/></svg> Experiencias únicas</div>
+        <div class="perk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg> Descuentos y promociones</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="auth-form-wrap">
+    <div class="auth-box">
+      <a href="index.html" class="auth-back">&larr; Volver al sitio</a>
+      <h2 style="font-family:var(--font-head); text-transform:uppercase; font-size:22px; margin-bottom:26px;">Registrate</h2>
+
+      <!-- Este formulario ahora lo maneja React (ver js/react/registro.bundle.js) -->
+      <div id="react-registro-root"></div>
+
+      <p class="auth-switch">¿Ya tenés cuenta? <a href="login.html">Iniciá sesión</a></p>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+  window.CSBJ_API_BASE = 'http://localhost:8000/api';
+</script>
+<script src="js/react/registro.bundle.js"></script>
+</body>
+</html>
