@@ -14,6 +14,21 @@ export default function AccountPanel() {
       .then(({ usuario }) => {
         setUsuario(usuario);
         setForm(usuario);
+
+        // Actualiza también el saludo y los datos fijos de "Mi panel",
+        // que están fuera de este componente (son HTML estático de la página).
+        const saludoEl = document.getElementById('panel-saludo');
+        const nroSocioEl = document.getElementById('panel-nro-socio');
+        const categoriaEl = document.getElementById('panel-categoria');
+        const avatarEl = document.getElementById('nav-avatar');
+
+        if (saludoEl) saludoEl.textContent = `¡Hola, ${usuario.nombre}!`;
+        if (nroSocioEl) nroSocioEl.textContent = usuario.nro_socio;
+        if (categoriaEl) categoriaEl.textContent = `★ ${usuario.categoria}`;
+        if (avatarEl) {
+          const iniciales = `${usuario.nombre?.[0] || ''}${usuario.apellido?.[0] || ''}`.toUpperCase();
+          avatarEl.textContent = iniciales || '--';
+        }
       })
       .catch((err) => setError(err.message))
       .finally(() => setCargando(false));
